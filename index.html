@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" defer></script>
 </head>
 <body>
   <!-- Navigation -->
@@ -18,6 +20,8 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#demo">Demo</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -31,6 +35,7 @@
       <p class="tagline">Product-minded Data Scientist & AI/ML Leader</p>
       <p class="subtitle">Designing and deploying scalable ML systems that bridge research and real-world business outcomes.</p>
       <a href="#contact" class="btn primary-btn">Let's Connect</a>
+      <a href="assets/Harikrishnan_Girikumar_Resume.pdf" class="btn secondary-btn" download>Download Résumé</a>
     </div>
   </section>
 
@@ -148,6 +153,45 @@
     </div>
   </section>
 
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h3 class="section-title">Featured Projects</h3>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400?text=Indiabillboards" alt="Indiabillboards Computer Vision" />
+          <div class="project-card-content">
+            <h4>Indiabillboards.com</h4>
+            <p>Computer vision platform leveraging YOLO models to empirically measure outdoor ad reach.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400?text=Remote+Resolution" alt="Remote Resolution" />
+          <div class="project-card-content">
+            <h4>Remote Resolution</h4>
+            <p>Proactive diagnostics & automation product for retail hardware—projected $2M annual savings.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400?text=RAG+Technician+Agent" alt="RAG Technician Agent" />
+          <div class="project-card-content">
+            <h4>Technician Recommendation Agent</h4>
+            <p>LLM-powered RAG system (Llama-3-70B) that reduces service SLAs by 18% for global retailers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section id="demo" class="section section-alt">
+    <div class="container">
+      <h3 class="section-title">Interactive Visualization</h3>
+      <p style="text-align:center">A quick D3.js bar chart demonstrating proficiency across key tools.</p>
+      <div id="viz" class="viz-container"></div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact" class="section section-alt">
     <div class="container contact-container">
@@ -161,6 +205,10 @@
   <footer class="footer">
     <div class="container">
       <p>© <span id="year"></span> Harikrishnan Girikumar. All rights reserved.</p>
+      <div class="social">
+        <a href="https://github.com/harikrishnan-girikumar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/harikrishnang/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
   </footer>
 
