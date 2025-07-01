@@ -85,3 +85,27 @@ if (yearSpan) {
       tooltip.style('opacity', 0);
     });
 })();
+
+// Project card tooltips
+(function () {
+  const cards = document.querySelectorAll('.project-card-content[data-detail]');
+  if (cards.length === 0) return;
+  const tooltip = document.createElement('div');
+  tooltip.className = 'tooltip';
+  document.body.appendChild(tooltip);
+
+  cards.forEach((card) => {
+    const message = card.getAttribute('data-detail');
+    card.parentElement.addEventListener('mousemove', (e) => {
+      tooltip.style.left = e.pageX + 15 + 'px';
+      tooltip.style.top = e.pageY - 20 + 'px';
+    });
+    card.parentElement.addEventListener('mouseenter', () => {
+      tooltip.textContent = message;
+      tooltip.style.opacity = 1;
+    });
+    card.parentElement.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = 0;
+    });
+  });
+})();

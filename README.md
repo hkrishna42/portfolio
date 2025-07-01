@@ -28,3 +28,6 @@ Feel free to adjust the colors, fonts, and sections in `styles.css` and `index.h
 * Interactive D3.js bar-chart demo in the "Demo" section (`script.js` + `#viz`).
 * Social links (GitHub & LinkedIn) in the footer.
 * Downloadable résumé button in Hero – replace the placeholder PDF in `assets/Harikrishnan_Girikumar_Resume.pdf` with your real résumé.
+* Converted résumé to PDF (`assets/Harikrishnan_Girikumar_Resume.pdf`).
+* Local project image for Indiabillboards (`assets/indiabillboards.jpg`).
+* Tooltips on project cards for richer hover info.
