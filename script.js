@@ -61,4 +61,27 @@ if (yearSpan) {
     .attr('width', x.bandwidth())
     .attr('height', (d) => height - y(d.value))
     .attr('fill', getComputedStyle(document.documentElement).getPropertyValue('--clr-primary'));
+
+  const tooltip = d3
+    .select(container)
+    .append('div')
+    .attr('class', 'tooltip');
+
+  svg
+    .selectAll('.bar')
+    .on('mouseover', function (event, d) {
+      d3.select(this).attr('fill', getComputedStyle(document.documentElement).getPropertyValue('--clr-secondary'));
+      tooltip
+        .style('opacity', 1)
+        .html(`${d.skill}: ${d.value}`)
+        .style('left', event.offsetX + 20 + 'px')
+        .style('top', event.offsetY - 20 + 'px');
+    })
+    .on('mousemove', function (event) {
+      tooltip.style('left', event.offsetX + 20 + 'px').style('top', event.offsetY - 20 + 'px');
+    })
+    .on('mouseout', function () {
+      d3.select(this).attr('fill', getComputedStyle(document.documentElement).getPropertyValue('--clr-primary'));
+      tooltip.style('opacity', 0);
+    });
 })();
